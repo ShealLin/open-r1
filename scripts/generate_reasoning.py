@@ -12,7 +12,8 @@ from tqdm.asyncio import tqdm
 
 import aiofiles
 import aiohttp
-import uvloop
+# windows 中不支持 uvloop
+# import uvloop
 
 
 file_lock = Lock()
@@ -170,5 +171,5 @@ async def main():
 
 
 if __name__ == "__main__":
-    uvloop.install()
+    # uvloop.install()
     asyncio.run(main())
